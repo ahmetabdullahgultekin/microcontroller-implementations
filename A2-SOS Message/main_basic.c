@@ -47,6 +47,12 @@ void configure_Button_pin(){
 	GPIOC->PUPDR &= ~GPIO_PUPDR_PUPDR13; // No pull-up, no pull-down
 }
 
+void initialize_controller(){
+	enable_HSI();
+	configure_LED_pin();
+	configure_Button_pin();
+}
+
 void turn_on_LED(){
 	GPIOA->ODR |= 1 << LED_PIN;
 }
@@ -61,8 +67,8 @@ void toggle_LED(){
 
 void delay_ms(int milli_seconds){
 		int i;
-    for(i=0; i<milli_seconds*1000; i++); // Wait 250ms for short light (1/4 sec)
-	/*
+    for(i=0; i<milli_seconds*1000; i++); // Wait milli-seconds
+	/* not working (probably because of clock();)
 		// Storing start time
     clock_t start_time = clock();
 
@@ -87,6 +93,7 @@ void light_long() {
 }
 
 void light_sos_message() {
+	// 3 shorts 3 longs 3 shorts (...---...)
 	light_short();
 	light_short();
 	light_short();
@@ -101,13 +108,12 @@ void light_sos_message() {
 }
 
 int main(void){
+	// Configurations
+	initialize_controller();
+	// Variables
 	uint32_t input;
-	enable_HSI();
-	configure_LED_pin();
-	configure_Button_pin();
-	turn_on_LED();
-	toggle_LED();
 	
+	// Infinite loop
 	while(1){
 		// Read pin 13
 		input = (GPIOC->IDR & GPIO_IDR_IDR_13);

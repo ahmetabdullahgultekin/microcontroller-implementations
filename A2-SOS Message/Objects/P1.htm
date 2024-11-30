@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\P1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\P1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Dec  1 00:45:45 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Dec  1 01:40:40 2024
 <BR><P>
 <H3>Maximum Stack Usage =         48 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -624,80 +624,81 @@ Global Symbols
 
 <P><STRONG><a name="[a4]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[77]"></a>configure_Button_pin</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, main_basic.o(.text.configure_Button_pin))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[72]"></a>configure_Button_pin</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, main_basic.o(.text.configure_Button_pin))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initialize_controller
 </UL>
 
-<P><STRONG><a name="[76]"></a>configure_LED_pin</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, main_basic.o(.text.configure_LED_pin))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[71]"></a>configure_LED_pin</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, main_basic.o(.text.configure_LED_pin))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initialize_controller
 </UL>
 
-<P><STRONG><a name="[71]"></a>delay_ms</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main_basic.o(.text.delay_ms))
+<P><STRONG><a name="[75]"></a>delay_ms</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main_basic.o(.text.delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
 </UL>
 
-<P><STRONG><a name="[75]"></a>enable_HSI</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main_basic.o(.text.enable_HSI))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[70]"></a>enable_HSI</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main_basic.o(.text.enable_HSI))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initialize_controller
 </UL>
 
-<P><STRONG><a name="[6f]"></a>light_long</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, main_basic.o(.text.light_long))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = light_long &rArr; delay_ms
+<P><STRONG><a name="[6f]"></a>initialize_controller</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, main_basic.o(.text.initialize_controller))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initialize_controller
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_off_LED
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_on_LED
-</UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
-</UL>
-
-<P><STRONG><a name="[73]"></a>light_short</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, main_basic.o(.text.light_short))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = light_short &rArr; delay_ms
-</UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_off_LED
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_on_LED
-</UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
-</UL>
-
-<P><STRONG><a name="[74]"></a>light_sos_message</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main_basic.o(.text.light_sos_message))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = light_sos_message &rArr; light_short &rArr; delay_ms
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configure_Button_pin
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configure_LED_pin
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_HSI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[66]"></a>main</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, main_basic.o(.text.main))
+<P><STRONG><a name="[73]"></a>light_long</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, main_basic.o(.text.light_long))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = light_long &rArr; delay_ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_off_LED
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_on_LED
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
+</UL>
+
+<P><STRONG><a name="[77]"></a>light_short</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, main_basic.o(.text.light_short))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = light_short &rArr; delay_ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_off_LED
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_on_LED
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
+</UL>
+
+<P><STRONG><a name="[78]"></a>light_sos_message</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main_basic.o(.text.light_sos_message))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = light_sos_message &rArr; light_short &rArr; delay_ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
+</UL>
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[66]"></a>main</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, main_basic.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = main &rArr; light_sos_message &rArr; light_short &rArr; delay_ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggle_LED
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_on_LED
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configure_Button_pin
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configure_LED_pin
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_HSI
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_sos_message
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initialize_controller
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[78]"></a>toggle_LED</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_basic.o(.text.toggle_LED))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[76]"></a>turn_off_LED</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_basic.o(.text.turn_off_LED))
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
 </UL>
 
-<P><STRONG><a name="[72]"></a>turn_off_LED</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_basic.o(.text.turn_off_LED))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
-</UL>
-
-<P><STRONG><a name="[70]"></a>turn_on_LED</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_basic.o(.text.turn_on_LED))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
+<P><STRONG><a name="[74]"></a>turn_on_LED</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_basic.o(.text.turn_on_LED))
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_long
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_short
 </UL>
 
 <P><STRONG><a name="[60]"></a>_fp_init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
