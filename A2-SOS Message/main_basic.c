@@ -6,6 +6,8 @@
 #define LED_PIN    5
 #define BUTTON_PIN 13
 
+volatile int32_t TimeDelay;
+
 // User HSI (high-speed internal) as the processor clock
 void enable_HSI(){
 	// Enable High Speed Internal Clock (HSI = 16 MHz)
@@ -47,10 +49,26 @@ void configure_Button_pin(){
 	GPIOC->PUPDR &= ~GPIO_PUPDR_PUPDR13; // No pull-up, no pull-down
 }
 
+// Input: ticks = number of ticks between two interrupts
+void SysTick_Initialize (uint32_t ticks) {
+	SysTick->CTRL = 0; // Disable SysTick
+	SysTick->LOAD = ticks - 1; // Set reload register
+	// Set interrupt priority of SysTick to least urgency (i.e., largest priority value)
+	NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);
+	SysTick->VAL = 0; // Reset the SysTick counter value
+	// Select processor clock: 1 = processor clock; 0 = external clock
+	SysTick->CTRL |= SysTick_CTRL_CLKSOURCE_Msk;
+	// Enables SysTick interrupt, 1 = Enable, 0 = Disable
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+	// Enable SysTick
+	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+}
+
 void initialize_controller(){
 	enable_HSI();
 	configure_LED_pin();
 	configure_Button_pin();
+	SysTick_Initialize(16000); // Interrupt period = 16000 cycles
 }
 
 void turn_on_LED(){
@@ -63,6 +81,17 @@ void turn_off_LED(){
 
 void toggle_LED(){
 	GPIOA->ODR ^= (1 << LED_PIN);
+}
+
+void SysTick_Handler (void) { // SysTick interrupt service routine
+	if (TimeDelay > 0) // Prevent it from being negative
+	TimeDelay--; // TimeDelay is a global volatile variable
+}
+
+void Delay (uint32_t nTime) {
+	// nTime: specifies the delay time length
+	TimeDelay = nTime; // TimeDelay must be declared as volatile
+	while(TimeDelay != 0); // Busy wait
 }
 
 void delay_ms(int milli_seconds){
@@ -80,16 +109,20 @@ void delay_ms(int milli_seconds){
 
 void light_short() {
 	turn_on_LED(); // Light is on
-	delay_ms(250); // Wait 250ms for short light (1/4 sec)
+	//delay_ms(250); // Wait 250ms for short light (1/4 sec)
+	Delay(250);
 	turn_off_LED(); // Light is off
-	delay_ms(250); // Wait 250ms for on/off (1/4 sec)
+	//delay_ms(250); // Wait 250ms for on/off (1/4 sec)
+	Delay(250);
 }
 
 void light_long() {
 	turn_on_LED(); // Light is on
-	delay_ms(500); // Wait 500ms for long light (1/2 sec)
+	//delay_ms(500); // Wait 500ms for long light (1/2 sec)
+	Delay(500);
 	turn_off_LED(); // Light is off
-	delay_ms(250); // Wait 250ms for on/off (1/4 sec)
+	//delay_ms(250); // Wait 250ms for on/off (1/4 sec)
+	Delay(250);
 }
 
 void light_sos_message() {
