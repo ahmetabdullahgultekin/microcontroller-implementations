@@ -1,0 +1,50 @@
+Dependencies for Project 'project', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (.\main.c)(0x675AFC7C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/main.o -MMD)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+I (SysClock.h)(0x675A9B47)
+I (I2C.h)(0x675A9B47)
+I (ssd1306.h)(0x675A9B47)
+I (ssd1306_conf.h)(0x675A9B47)
+I (ssd1306_fonts.h)(0x675A9B47)
+I (ssd1306_tests.h)(0x675A9B47)
+I (keypad.h)(0x675AA9CB)
+F (.\startup_stm32l476xx.s)(0x675A9B47)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --diag_suppress=A1950W-I.\RTE\_Target_1-IC:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Arm\Packs\Keil\STM32L4xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include--pd "__UVISION_VERSION SETA 541"--pd "STM32L476xx SETA 1"--pd "_RTE_ SETA 1"--list .\listings\startup_stm32l476xx.lst--xref -o .\objects\startup_stm32l476xx.o--depend .\objects\startup_stm32l476xx.d)
+F (.\stm32l476xx.h)(0x675A9B47)()
+F (.\I2C.c)(0x675A9B47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/i2c.o -MMD)
+I (I2C.h)(0x675A9B47)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+F (.\ssd1306.c)(0x675A9B47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/ssd1306.o -MMD)
+I (ssd1306.h)(0x675A9B47)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+I (ssd1306_conf.h)(0x675A9B47)
+I (ssd1306_fonts.h)(0x675A9B47)
+I (I2C.h)(0x675A9B47)
+F (.\ssd1306_fonts.c)(0x675A9B47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/ssd1306_fonts.o -MMD)
+I (ssd1306_fonts.h)(0x675A9B47)
+I (ssd1306_conf.h)(0x675A9B47)
+F (.\ssd1306_tests.c)(0x675A9B47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/ssd1306_tests.o -MMD)
+I (ssd1306.h)(0x675A9B47)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+I (ssd1306_conf.h)(0x675A9B47)
+I (ssd1306_fonts.h)(0x675A9B47)
+I (ssd1306_tests.h)(0x675A9B47)
+F (.\SysClock.c)(0x675A9B47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/sysclock.o -MMD)
+I (SysClock.h)(0x675A9B47)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+F (.\keypad.c)(0x675AD4EB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Arm/Packs/Keil/STM32L4xx_DFP/2.7.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32L4xx_DFP/3.0.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="541" -DSTM32L476xx -D_RTE_-o ./objects/keypad.o -MMD)
+I (keypad.h)(0x675AA9CB)
+I (stm32l476xx.h)(0x675A9B47)
+I (C:\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C1ED8)
+I (C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x674828BB)
+F (.\keypad.h)(0x675AA9CB)()
