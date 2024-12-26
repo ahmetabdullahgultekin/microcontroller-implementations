@@ -122,32 +122,24 @@ void Delay (uint32_t nTime) {
 	while(TimeDelay != 0); // Busy wait
 }
 
-void delay_ms(int milli_seconds){
-		int i;
-    for(i=0; i<milli_seconds*1000; i++); // Wait milli-seconds
-	/* not working (probably because of clock();)
-		// Storing start time
-    clock_t start_time = clock();
-
-    // looping till required time is not achieved
-    while (clock() < start_time + milli_seconds) 
-		{}
-	*/
-}
-
 int main(void){
 	// Configurations
 	initialize_controller();
-	// Variables
-	uint32_t input;
-	
+	// Variable
+	int i;
 	// Infinite loop
-	while(1){
-		// Read pin 13
-		input = (GPIOC->IDR & GPIO_IDR_IDR_13);
-		if (input == 0) {
-		// Button is pressed
-			//light_sos_message();
-		}
-	}
+	while (1) {
+        // Trigger the ultrasonic sensor
+        TIM3->CCR2 = 10;          // Set 10µs pulse width
+        TIM3->CR1 |= TIM_CR1_CEN; // Start TIM3 counter
+
+        // Add a small delay for the measurement
+        for (i = 0; i < 100000; i++);
+
+        // Calculate the pulse width and convert to distance
+        uint32_t pulse_width = (falling_edge - rising_edge) + (overflow_count * 0xFFFF);
+        distance = pulse_width / 58; // Convert pulse width to cm (time in µs)
+
+        // Debugging: Check `distance` in a debugger or display on an LCD
+    }
 }
