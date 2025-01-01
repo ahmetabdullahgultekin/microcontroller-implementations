@@ -1,6 +1,10 @@
 --cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
 ".\objects\startup_stm32l476xx.o"
 ".\objects\main_basic.o"
+".\objects\ssd1306.o"
+".\objects\ssd1306_fonts.o"
+".\objects\ssd1306_tests.o"
+".\objects\i2c.o"
 --strict --scatter ".\Objects\p4.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

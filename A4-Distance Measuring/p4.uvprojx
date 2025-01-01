@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>C:\Arm\Packs\Keil\STM32L4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include</IncludePath>
+              <IncludePath></IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -398,6 +398,56 @@
               <FileName>main_basic.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main_basic.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32l4xx.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system_stm32l4xx.h</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ssd1306_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ssd1306.h</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ssd1306.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306_fonts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ssd1306_fonts.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306_fonts.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ssd1306_fonts.h</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306_tests.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ssd1306_tests.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306_tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ssd1306_tests.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\I2C.h</FilePath>
             </File>
           </Files>
         </Group>
